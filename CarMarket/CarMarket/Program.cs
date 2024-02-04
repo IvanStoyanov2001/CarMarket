@@ -1,3 +1,11 @@
+using CarMarket.BL.Interfaces;
+using CarMarket.BL.Services;
+using CarMarket.DL.Interfaces;
+using CarMarket.DL.Repositories;
+using CarMarket.Healthchecks;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+
 namespace CarMarket
 {
     public class Program
@@ -6,27 +14,51 @@ namespace CarMarket
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-            builder.Services.AddRazorPages();
+            builder.Services
+       .AddSingleton<ICarRepository, CarRepository>();
+            builder.Services
+                .AddSingleton<ICarService, CarService>();
+            builder.Services
+               .AddSingleton<IBrandRepository, BrandRepository>();
+            builder.Services
+                .AddSingleton<IBrandService, BrandService>();
+            builder.Services
+                .AddSingleton<ILibraryService, LibraryService>();
+            builder.Services.AddControllers();
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
+
+            builder.Services
+                .AddFluentValidationAutoValidation();
+            builder.Services
+                .AddValidatorsFromAssemblyContaining(typeof(Program));
+
+            builder.Services.AddHealthChecks()
+                .AddCheck<CustomHealthCheck>(nameof(CustomHealthCheck));
+
+            builder.Services
+                .AddFluentValidationAutoValidation();
+            builder.Services
+                .AddValidatorsFromAssemblyContaining(typeof(Program));
+
+
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
+            if (app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
+            app.MapHealthChecks("/healthz");
+
+            app.MapControllers();
 
             app.Run();
         }

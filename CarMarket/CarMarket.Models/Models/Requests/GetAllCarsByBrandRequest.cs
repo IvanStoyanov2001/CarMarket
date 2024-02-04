@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarMarket.Models.Models.Requests
+﻿namespace CarMarket.Models.Requests
 {
-    internal class GetAllCarsByBrandRequest
+    public class GetAllCarsByBrandRequest
     {
+        public int BrandId { get; set; }
+
+        public DateTime DateAfter { get; set; }
     }
 }

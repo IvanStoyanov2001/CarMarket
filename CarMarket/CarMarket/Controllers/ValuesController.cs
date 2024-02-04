@@ -1,6 +1,11 @@
-﻿namespace CarMarket.Controllers
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace BookStore.Controllers
 {
-    public class ValuesController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ValuesController : ControllerBase
     {
     }
 }

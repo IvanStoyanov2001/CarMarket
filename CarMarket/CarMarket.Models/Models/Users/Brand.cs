@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CarMarket.Models.Models.Users
+﻿namespace CarMarket.Models.Models.Users
 {
-    internal class Brand
+    public class Brand
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; } = string.Empty;
+
+        public DateTime StartupDay { get; set; }
     }
 }

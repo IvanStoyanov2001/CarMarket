@@ -5,13 +5,13 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarMarket", "CarMarket\CarMarket.csproj", "{D925ED63-E5B0-4332-92CD-F17E55C396B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMarket.BL", "CarMarket.BL\CarMarket.BL.csproj", "{2D93BFC1-EE88-4F14-8D87-56CB9328CBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarMarket.BL", "CarMarket.BL\CarMarket.BL.csproj", "{2D93BFC1-EE88-4F14-8D87-56CB9328CBE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMarket.DL", "CarMarket.DL\CarMarket.DL.csproj", "{BF48208A-06EC-4A74-8876-63BC267A1707}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarMarket.DL", "CarMarket.DL\CarMarket.DL.csproj", "{BF48208A-06EC-4A74-8876-63BC267A1707}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMarket.Models", "CarMarket.Models\CarMarket.Models.csproj", "{6D7CCAF9-DAA7-42DF-AFD6-9158274CE24C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarMarket.Models", "CarMarket.Models\CarMarket.Models.csproj", "{6D7CCAF9-DAA7-42DF-AFD6-9158274CE24C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarMarket.Test", "CarMarket.Test\CarMarket.Test.csproj", "{A1B0DFDA-E1A8-4474-8B0A-61B4044AF540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarMarket.Test", "CarMarket.Test\CarMarket.Test.csproj", "{A1B0DFDA-E1A8-4474-8B0A-61B4044AF540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CarMarket.Models.Models;
+using CarMarket.Models.Models.Users;
 
 namespace CarMarket.DL.Interfaces
 {
-    internal class ICarRepository
+    public interface ICarRepository
     {
+        List<Car> GetAll();
+
+        Car GetById(int id);
+
+        void Add(Car car);
+
+        void Remove(int id);
+
+        List<Car> GetAllByBrand(int brandId);
     }
 }

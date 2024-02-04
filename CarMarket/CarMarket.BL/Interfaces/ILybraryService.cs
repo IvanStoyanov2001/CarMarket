@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CarMarket.Models.Requests;
+using CarMarket.Models.Responses;
 
 namespace CarMarket.BL.Interfaces
 {
-    internal class ILybraryService
+    public interface ILibraryService
     {
+        int CheckCarCount(int input);
+        GetAllCarsByBrandResponse?
+            GetAllCarsByBrandAfterReleaseDate(
+                GetAllCarsByBrandRequest request);
+
     }
 }

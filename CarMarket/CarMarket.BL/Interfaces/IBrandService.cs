@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CarMarket.Models.Models.Users;
 
 namespace CarMarket.BL.Interfaces
 {
-    internal class IBrandService
+    public interface IBrandService
     {
+        List<Brand> GetAll();
+
+        Brand GetById(int id);
+
+        void Add(Brand brand);
+
+        void Remove(int id);
     }
 }
